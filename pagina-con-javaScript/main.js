@@ -16,12 +16,13 @@ menuCarritoIcon.addEventListener('click', toggleCarritoAside);
 productDetailClose.addEventListener('click',closeProductDetailAside);
 
 
+
 function toggleDesktopMenu() {
     console.log('Click');
 
-    const isAsideClose = shoppingCartContainer.classList.contains('inactive');
+    const isAsideClosd = shoppingCartContainer.classList.contains('inactive');
     
-    if (!isAsideClose) 
+    if (!isAsideClosd) 
     {
 
        shoppingCartContainer.classList.add('inactive');   
@@ -29,19 +30,17 @@ function toggleDesktopMenu() {
     desktopMenu.classList.toggle('inactive');
 }
 
+
 function toggleMobileMenu() {
     const isAsideOpen = shoppingCartContainer.classList.contains('inactive');
     
-    if (isAsideOpen) 
+    if (!isAsideOpen) 
     {
 
-        shoppingCartContainer.classList.add('active');   
+        shoppingCartContainer.classList.add('inactive');   
     } 
 
     closeProductDetailAside();
-
-    
-
     mobileMenu.classList.toggle('inactive'); 
 }
 
@@ -59,7 +58,6 @@ function toggleCarritoAside() {
         {
             productDetailContainer.classList.add('inactive');   
         } 
-
         
         shoppingCartContainer.classList.toggle('inactive'); 
 }
@@ -74,6 +72,7 @@ function openProductDetailAside() {
 //Lo usamos para que a la hora de presionar el bton (x) este se vuelva inactivo
 function closeProductDetailAside() {
     productDetailContainer.classList.add('inactive');
+    
     
 }
 
